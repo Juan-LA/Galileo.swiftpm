@@ -18,9 +18,10 @@ struct ArView : View {
         // Load the "Box" scene from the "Experience" Reality File
        // arView.frame = .zero
       //  arView.scene.anchors.removeAll()
-        
-        ARViewContainer(selectedCelestial: selectedCelestial.image)
-        
+        ZStack{
+            Color(.black)
+            ARViewContainer(selectedCelestial: selectedCelestial.image)
+        }.background(.black)
         // Add the box anchor to the scene
     }
 }
