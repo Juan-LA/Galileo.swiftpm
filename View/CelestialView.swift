@@ -33,9 +33,9 @@ struct CelestialView : View {
                 backColor
                 VStack(alignment: .leading){
                     
-                    //
-                    Text("Discover").font(.title).foregroundColor(.gray).padding(.leading, 20)
-                    Text(selectedCelestial.name).font(.system(size: 50)).foregroundColor(.white).bold().padding(.leading, 20)
+                    ///Title
+                    Text("Discover").font(.title).foregroundColor(.gray)
+                    Text(selectedCelestial.name).font(.system(size: 50)).foregroundColor(.white).bold()
                     
                     ScrollView{
                         VStack(alignment: .center, spacing: 0){
@@ -58,37 +58,14 @@ struct CelestialView : View {
                                     }.padding(.leading, 10).padding(.trailing, 10)
                                 } else if selectedCelestial.big < 1{
                                     
-//                                    if selectedCelestial.name == "Venus" {
-//
-//                                        HStack(alignment: .center){
-//                                            Image(selectedCelestial.image).resizable().scaledToFit().padding(.bottom, 25)
-//
-//                                                                            Image("earth").resizable().scaledToFit().frame(width: 500 * CGFloat(selectedCelestial.big), height: 500 * CGFloat(selectedCelestial.big)).padding(.bottom, 25)
-//
-//                                        }.padding(.leading, 10)
-//                                    } else {
                                         HStack(alignment: .center){
                                             Image(selectedCelestial.image).resizable().scaledToFit().padding(.bottom, 25).frame( height: 500 * CGFloat(selectedCelestial.big))
                                         
                                                                             Image("earth").resizable().scaledToFit().padding(.bottom, 25)
                                         }.padding(.leading, 10).padding(.trailing, 10)
-//                                    }
                                 }
                                 
                             }
-                            
-                            
-                            
-//                            HStack{
-//                                //image Celestial
-//                                Image(selectedCelestial.image).padding(.bottom, 25).frame(height: 500)
-//
-//                                if comparisonOn {
-//                                    Image("earth").padding(.bottom, 25).frame(width: (500 * CGFloat(selectedCelestial.big)))
-//                                }
-//
-//
-//                            }
                             
                             
                             HStack{
@@ -102,6 +79,7 @@ struct CelestialView : View {
                                     }.background(Color(red: 0.27, green: 0.27, blue: 0.52, opacity: 1)).clipShape(Rectangle()).cornerRadius(16, antialiased: false)
                                 }
                                 
+                                ///Button "Compare to Earth"
                                 if selectedCelestial.name != "Earth"{
                                     Button {
                                         comparisonOn = !comparisonOn
@@ -110,28 +88,27 @@ struct CelestialView : View {
                                     }.background(Color(red: 0.27, green: 0.27, blue: 0.52, opacity: 1)).clipShape(Rectangle()).cornerRadius(16, antialiased: true)
                                 }
                                 
-                                
-                                
-                                
-
-                                
                             }
                             
-                            
                         }
-                        //body section w/ description and details
+                        
+                        ///Body section w/ description and details of the Celestial
                         VStack(alignment: .leading, spacing: 10){
-                            //descrizione
+                            ///Description
                             Text("Description").bold().font(.title2)
                             
                             Text(verbatim: selectedCelestial.description).font(.body)
-                            //tabella con dettagli e dati
-                            //dettagli
+                            
+                            ///Name's origin
+                            Text("Origin of the name").bold().font(.title2)
+                            
+                            Text(verbatim: selectedCelestial.originName).font(.body)
+                            
+                            ///Table with the details of the Celestial
                             Text("\nDetails").bold().font(.title2)
                             
-                            //tabella con dettagli e dati
-                            Text("Visibility").bold().font(.title3)
-                        }.padding(.leading, 20).foregroundColor(.white)
+                            
+                        }.foregroundColor(.white)
                         
                         
                             
@@ -139,10 +116,10 @@ struct CelestialView : View {
                             
                         
                         
-                    }.padding(.trailing, 20)
+                    }
                     
                    
-                }.padding(.top, 20)
+                }.padding(.top, 10).padding(.trailing, 30).padding(.leading, 30)
                     
             }.foregroundColor(.white).background(backColor)
         

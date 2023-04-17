@@ -145,7 +145,7 @@ struct TableView: View {
             
             
             
-        }.background(darkBackColor).cornerRadius(16).padding(.leading, 20).padding(.trailing, 20)
+        }.background(darkBackColor).cornerRadius(16).padding(.leading, 30).padding(.trailing, 30)
         }
     }
 
