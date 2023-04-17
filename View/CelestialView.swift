@@ -72,8 +72,8 @@ struct CelestialView : View {
                                 
                                 //AR button if AR is available
                                 if selectedCelestial.isARavailable{
-                                    Button {
-                                        print("Look AR")
+                                    NavigationLink {
+                                        ArView(selectedCelestial: selectedCelestial)
                                     } label: {
                                         Text(verbatim: "See AR").frame(width:80, height: 30, alignment: .center).padding(7).foregroundColor(.white)
                                     }.background(Color(red: 0.27, green: 0.27, blue: 0.52, opacity: 1)).clipShape(Rectangle()).cornerRadius(16, antialiased: false)
