@@ -8,29 +8,48 @@
 import SwiftUI
 
 struct AboutView: View {
+    ///For the custom back button
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
+    
     var body: some View {
             ZStack{
                 ///Background
-                backColor
+                Image("wallpaper").resizable()
                 
                 VStack{
                     
                     ///Tile with personal info
-                    ZStack(alignment: .top){
+                    ZStack(alignment: .topLeading){
                         ///Background tile
-                        Rectangle().background(darkBackColor).frame(height: 200).cornerRadius(16)
+                        Rectangle().foregroundColor(darkBackColor).background(btnColor).frame(height: 300).cornerRadius(16)
+                        
                         
                         ///Content
                         HStack{
+                            Rectangle().foregroundColor(.white).frame(width: 300, height: 300).cornerRadius(16)
                             
                         }
                         
-                    }.padding(.leading, 20).padding(.trailing, 20)
+                    }.padding(.leading, 40).padding(.trailing, 40)
                     
+                    
+                    Spacer()
                 }
                 
-            }.background(backColor)
+            }.background(darkness).foregroundColor(.white).navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: backButton)
     }
+    
+    var backButton: some View {
+            Button(action: {
+                self.presentationMode.wrappedValue.dismiss()
+            }) {
+                Image(systemName: "arrow.left")
+                    .foregroundColor(.white).padding(.leading, 20)
+            }
+        }
+    
 }
 
 struct AboutView_Previews: PreviewProvider {

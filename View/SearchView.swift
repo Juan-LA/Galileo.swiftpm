@@ -17,6 +17,12 @@ let columns = [
 
 struct SearchView: View {
     
+    var statusBarColor: Color = .white {
+    didSet {
+    self.background(statusBarColor)
+    }
+    }
+    
     ///Categories that will be displayed
     var categories : [String] = ["Planet", "Star", "Satellite"]
     
@@ -114,7 +120,7 @@ struct SearchView: View {
             }.padding(.leading, 40).padding(.trailing, 40).padding(.bottom, 20)
               
         }.background(darkness).navigationBarBackButtonHidden()
-             
+            
         }.background(backColor)
         
     }
