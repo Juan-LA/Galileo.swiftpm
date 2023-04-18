@@ -9,7 +9,27 @@ import SwiftUI
 
 struct AboutView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            ZStack{
+                ///Background
+                backColor
+                
+                VStack{
+                    
+                    ///Tile with personal info
+                    ZStack(alignment: .top){
+                        ///Background tile
+                        Rectangle().background(darkBackColor).frame(height: 200).cornerRadius(16)
+                        
+                        ///Content
+                        HStack{
+                            
+                        }
+                        
+                    }.padding(.leading, 20).padding(.trailing, 20)
+                    
+                }
+                
+            }.background(backColor)
     }
 }
 

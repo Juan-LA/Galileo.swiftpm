@@ -29,24 +29,48 @@ struct ArView : View {
 
 struct ARViewContainer: UIViewRepresentable {
     
+    ///For rotation
+    ///
+    @State private var rotation = Angle.zero
+    var rotationGesture: some Gesture {
+            RotationGesture()
+            
+                .onChanged{ angle in
+                    rotation = angle
+                }
+            
+                .onEnded { angle in
+                    rotation = angle
+                }
+            
+        }
+    
     var selectedCelestial : String
     
     func makeUIView(context: Context) -> ARView {
+        
         return ARView(frame: .zero)
     }
     
     func updateUIView(_ uiView: ARView, context: Context) {
         showPlanet(uiView: uiView)
+        
     }
     
     private func showPlanet(uiView: ARView) {
         uiView.scene.anchors.removeAll()
+        uiView.isUserInteractionEnabled = true
         
+        
+        ///adding "pinch" gesture
+//        let pinchGesture = UIPinchGestureRecognizer(target: context.coordinator, action: #selector(Coordinator.handlePinchGesture(_:)))
+//        uiView.addGestureRecognizer(pinchGesture)
         
         let anchor = AnchorEntity()
         
         let fileURL = Bundle.main.url(forResource: selectedCelestial, withExtension: "reality")
         let planetScene = try! Entity.load(contentsOf: fileURL!)
+        
         
       //  var boxAnchor = anchor.findEntity(named: "Marte")
         
@@ -56,6 +80,8 @@ struct ARViewContainer: UIViewRepresentable {
         anchor.position.y = -0.5
         
         uiView.scene.anchors.append(anchor)
+        
+        
        
     }
 }

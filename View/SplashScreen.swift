@@ -20,7 +20,7 @@ struct SplashScreen: View {
         ZStack{
             
             ///Background
-            backColor
+            Image("wallpaper").resizable().scaledToFill()
             
             ///Logo
             HStack{
@@ -34,13 +34,13 @@ struct SplashScreen: View {
                         
                         
                     }
-            }.background(backColor).onAppear {
+            }.background(darkness).onAppear {
                 DispatchQueue.main.asyncAfter (deadline: .now() + 2) {
                     self.isActive = true
                 }
             }
             }.fullScreenCover(isPresented: $isActive, content: {
-                SearchView()}).background(backColor)
+                SearchView()}).background(darkness)
             
         
         

@@ -4,7 +4,7 @@
         "image": "sun",
         "description": "The Sun is a star located at the center of the solar system. It has a diameter of about 1.39 million kilometers (864,938 miles) and a mass of approximately 1.99 × 10^30 kilograms, which is about 333,000 times the mass of the Earth. The Sun is composed mainly of hydrogen and helium and generates energy through nuclear fusion at its core, which produces light and heat that sustain life on Earth. The Sun's surface temperature is about 5500°C (9932°F), while the core temperature can reach up to 15 million°C (27 million°F). The Sun is also characterized by its magnetic field, which affects the behavior of the planets in the solar system and produces phenomena such as sunspots, solar flares, and coronal mass ejections.",
         "originName": "The name of the Sun comes from the Latin word \"Sol\", which means \"bright\" or \"shining\". This name has been used since ancient times to refer to the central star of our solar system, which has been attributed many deities and symbols in the culture and religion of many civilizations.",
-        "isARavailable": false,
+        "isARavailable": true,
         "big": 109,
         "type": "Star",
         "nSatellites": 0,

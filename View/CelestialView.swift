@@ -17,7 +17,8 @@ import SwiftUI
 
 struct CelestialView : View {
     
-    
+    ///For the custom back button
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var selectedCelestial : Celestial
     
@@ -30,11 +31,13 @@ struct CelestialView : View {
         
             ZStack{
                 
-                backColor
+                ///Background
+                Image("wallpaper").resizable().scaledToFill()
+                
                 VStack(alignment: .leading){
                     
                     ///Title
-                    Text("Discover").font(.title).foregroundColor(.gray)
+                    Text("Discover").font(.title).foregroundColor(.gray).padding(.top, 25)
                     Text(selectedCelestial.name).font(.system(size: 50)).foregroundColor(.white).bold()
                     
                     ScrollView{
@@ -73,7 +76,7 @@ struct CelestialView : View {
                                 //AR button if AR is available
                                 if selectedCelestial.isARavailable{
                                     NavigationLink {
-                                        ArView(selectedCelestial: selectedCelestial).tint(.white)
+                                        ArView(selectedCelestial: selectedCelestial).tint(.white).tint(.white)
                                     } label: {
                                         Text(verbatim: "See AR").frame(width:80, height: 30, alignment: .center).padding(7).foregroundColor(.white)
                                     }.background(Color(red: 0.27, green: 0.27, blue: 0.52, opacity: 1)).clipShape(Rectangle()).cornerRadius(16, antialiased: false)
@@ -105,7 +108,7 @@ struct CelestialView : View {
                             Text(verbatim: selectedCelestial.originName).font(.body)
                             
                             ///Table with the details of the Celestial
-                            Text("\nDetails").bold().font(.title2)
+                            Text("Details").bold().font(.title2)
                             
                             
                         }.foregroundColor(.white)
@@ -119,12 +122,22 @@ struct CelestialView : View {
                     }
                     
                    
-                }.padding(.top, 10).padding(.trailing, 30).padding(.leading, 30)
+                }.padding(.top, 10).padding(.trailing, 30).padding(.leading, 30).padding(.bottom, 40)
                     
-            }.foregroundColor(.white).background(backColor)
+            }.navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: backButton.padding() ).tint(Color(.white)).foregroundColor(.white).background(darkness)
         
        
     }
+    
+    var backButton: some View {
+            Button(action: {
+                self.presentationMode.wrappedValue.dismiss()
+            }) {
+                Image(systemName: "arrow.left")
+                    .foregroundColor(.white)
+            }
+        }
 }
 
 //struct CelestialView_Previews: PreviewProvider {
