@@ -1,40 +1,118 @@
-//import SwiftUI
-//import UIKit
-//
-//struct JustifiedTextView: UIViewRepresentable {
-//    @Binding var text: String
-//
-//    func makeUIView(context: Context) -> UITextView {
-//        let textView = UITextView()
-//        textView.isEditable = false
-//        textView.isSelectable = false
-//        textView.text = text
-//        textView.font = UIFont.systemFont(ofSize: 17)
-//        textView.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
-//        textView.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
-//        textView.textAlignment = .justified
-//        return textView
-//    }
-//
-//    func updateUIView(_ uiView: UITextView, context: Context) {
-//        uiView.text = text
-//    }
-//
-//    func makeCoordinator() -> Coordinator {
-//        Coordinator(text: $text)
-//    }
-//
-//    class Coordinator: NSObject, UITextViewDelegate {
-//        @Binding var text: String
-//
-//        init(text: Binding<String>) {
-//            _text = text
-//        }
-//
-//        func textViewDidChange(_ textView: UITextView) {
-//            DispatchQueue.main.async {
-//                self.text = textView.text
-//            }
-//        }
-//    }
-//}
+/*
+///Stack with additional info
+
+
+if selectedCelestial.type.contains("Planet"){
+    
+    Group{
+        ///Place in the Solar System
+        HStack{
+            Text("Place inside the Solar System").foregroundColor(.white)
+            Spacer()
+            Text(String(getPosition(planet: selectedCelestial.name))).foregroundColor(.white)
+            
+        }.padding(.leading, 20).padding(.trailing, 20).padding(.top, 10)
+        
+        Divider().background(.white).padding(.leading, 20).padding(.trailing, 20)
+    }
+    
+}
+
+
+Group{
+    ///Type of celestial
+    HStack{
+        Text("Type").foregroundColor(.white)
+        Spacer()
+        Text(selectedCelestial.type).foregroundColor(.white)
+        
+    }.padding(.leading, 20).padding(.trailing, 20).padding(.top, 10)
+    
+    Divider().background(.white).padding(.leading, 20).padding(.trailing, 20)
+}
+
+///Number of satellites
+if selectedCelestial.type.contains("Planet"){
+    
+    
+    Group{
+        HStack{
+            Text("Number of satellites").foregroundColor(.white)
+            Spacer()
+            Text(String(selectedCelestial.nSatellites)).foregroundColor(.white)
+            
+        }.padding(.leading, 20).padding(.trailing, 20).padding(.top, 10)
+        
+        Divider().background(.white).padding(.leading, 20).padding(.trailing, 20)
+    }
+    
+    
+}
+
+///Times bigger than Earth
+Group{
+    HStack{
+        Text("Times bigger than Earth ").foregroundColor(.white)
+        Spacer()
+        Text(String(selectedCelestial.big)).foregroundColor(.white)
+        
+    }.padding(.leading, 20).padding(.trailing, 20).padding(.top, 10)
+    
+    Divider().background(.white).padding(.leading, 20).padding(.trailing, 20)
+}
+
+///Radius
+Group{
+    HStack{
+        Text("Radius").foregroundColor(.white)
+        Spacer()
+        Text(String(selectedCelestial.radius)).foregroundColor(.white)
+        
+    }.padding(.leading, 20).padding(.trailing, 20).padding(.top, 10)
+    
+    Divider().background(.white).padding(.leading, 20).padding(.trailing, 20)
+}
+
+///Mass
+Group{
+    HStack{
+        Text("Mass").foregroundColor(.white)
+        Spacer()
+        Text(String(selectedCelestial.mass)).foregroundColor(.white)
+        
+    }.padding(.leading, 20).padding(.trailing, 20).padding(.top, 10)
+    
+    Divider().background(.white).padding(.leading, 20).padding(.trailing, 20)
+}
+
+///Density
+Group{
+    HStack{
+        Text("Density").foregroundColor(.white)
+        Spacer()
+        Text(String(selectedCelestial.density)).foregroundColor(.white)
+        
+    }.padding(.leading, 20).padding(.trailing, 20).padding(.top, 10)
+    
+    Divider().background(.white).padding(.leading, 20).padding(.trailing, 20)
+}
+
+///Maximum temperature
+HStack{
+    Text("Maximum temperature").foregroundColor(.white)
+    Spacer()
+    Text(String(selectedCelestial.tMax)).foregroundColor(.white)
+    
+}.padding(.leading, 20).padding(.trailing, 20).padding(.top, 10)
+
+Divider().background(.white).padding(.leading, 20).padding(.trailing, 20)
+
+///Maximum temperature
+HStack{
+    Text("Minimum temperature").foregroundColor(.white)
+    Spacer()
+    Text(String(selectedCelestial.tMin)).foregroundColor(.white)
+    
+}.padding(.leading, 20).padding(.trailing, 20).padding(.top, 10).padding(.bottom, 20)
+
+*/

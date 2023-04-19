@@ -31,7 +31,7 @@ struct TableView: View {
                 ForEach( 0..<specifics.count ){
                     s in
                     
-                    if !selectedCelestial.type.contains("Planet") && (specifics[s] == "Place inside the Solar System" || specifics[s] == "Number of satellites" ){
+                    if (!selectedCelestial.type.contains("Planet") && (specifics[s] == "Place inside the Solar System" || specifics[s] == "Number of satellites" )) || (selectedCelestial.type.contains("Planet") && selectedCelestial.name == "Earth" &&  specifics[s] == "Times bigger than Earth"){
                         
                     } else {
                         
