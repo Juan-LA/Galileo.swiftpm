@@ -37,7 +37,7 @@ struct AboutView: View {
                         ///Content
                         HStack(alignment: .center, spacing: 30){
                             ///Image
-                            Image("photo").resizable().frame(width: 300, height: 500).cornerRadius(16)
+                            Image("photo").resizable().scaledToFill().frame(width: 300, height: 500).cornerRadius(16)
                             
                            
                                 ///Presentation text

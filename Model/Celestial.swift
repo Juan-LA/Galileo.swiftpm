@@ -122,22 +122,32 @@ func getListNamePlanet() -> [String]{
     return results
 }
 
-/////Function to retrieve data of stars or satellites
-//func getListCelestial(name: String) -> [Celestial]{
-//    var results : [Celestial] = []
-//
-//
-//    guard let url = Bundle.main.url(forResource: name, withExtension: "json") else {
-//        fatalError("File not found")
-//    }
-//
-//    //reads data
-//    let data = try! Data(contentsOf: url)
-//    let decoder = JSONDecoder()
-//    results = try! decoder.decode([Celestial].self, from: data)
-//
-//    return results
-//}
+///Function to retrieve data of a Celestial and saves it in a Array String
+func getDataAsString(celestial : Celestial) -> [String]{
+    var result : [String] = []
+    
+    ///Place inside the solar system
+    result.append(String(getPosition(planet: celestial.name)))
+    ///Type
+    result.append(celestial.type)
+    ///Number of satellites
+    result.append(String(celestial.nSatellites))
+    ///Times bigger than Earth
+    result.append(String(celestial.big))
+    ///Radius
+    result.append(celestial.radius)
+    ///Mass
+    result.append(celestial.mass)
+    ///Density
+    result.append(celestial.density)
+    ///Maximum temperature
+    result.append(celestial.tMax)
+    ///Minimum temperature
+    result.append(celestial.tMin)
+    
+    
+    return result
+}
 
 ///Functions that returns the position of the element inside the solar system
 func getPosition(planet: String) -> Int {

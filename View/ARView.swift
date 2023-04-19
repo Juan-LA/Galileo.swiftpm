@@ -20,7 +20,7 @@ struct ArView : View {
       //  arView.scene.anchors.removeAll()
         ZStack{
             Color(.black)
-            ARViewContainer(selectedCelestial: selectedCelestial.image)
+            ARViewContainer(selectedCelestial: selectedCelestial.image).tint(.white)
         }.background(.black)
         // Add the box anchor to the scene
     }
@@ -61,23 +61,24 @@ struct ARViewContainer: UIViewRepresentable {
         uiView.scene.anchors.removeAll()
         uiView.isUserInteractionEnabled = true
         
-        
-        ///adding "pinch" gesture
-//        let pinchGesture = UIPinchGestureRecognizer(target: context.coordinator, action: #selector(Coordinator.handlePinchGesture(_:)))
-//        uiView.addGestureRecognizer(pinchGesture)
-        
         let anchor = AnchorEntity()
         
         let fileURL = Bundle.main.url(forResource: selectedCelestial, withExtension: "reality")
         let planetScene = try! Entity.load(contentsOf: fileURL!)
-        
-        
-      //  var boxAnchor = anchor.findEntity(named: "Marte")
-        
+ 
         // Add the box anchor to the scene
         anchor.addChild(planetScene)
-        anchor.scale = [1,1,1]
+        
+        if selectedCelestial == "sun"{
+            anchor.scale = [3,3,3]
+        } else if selectedCelestial == "mars"{
+            anchor.scale = [1,1,1]
+        }
+        
         anchor.position.y = -0.5
+        anchor.position.x = 0
+        anchor.position.z = -2
+        
         
         uiView.scene.anchors.append(anchor)
         

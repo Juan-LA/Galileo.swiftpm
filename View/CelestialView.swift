@@ -159,7 +159,7 @@ struct CelestialView : View {
             
                     }.foregroundColor(.white).background(darkness).navigationBarBackButtonHidden(true)
                         .navigationBarItems(leading: backButton)
-        
+                        .tint(.white)
     }
     
     
