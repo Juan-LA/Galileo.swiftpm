@@ -8,9 +8,10 @@
 import SwiftUI
 
 ///Columns grid
-let columns = [
-    GridItem(.adaptive(minimum: 350))
-]
+let column = [GridItem(spacing: 20), GridItem(spacing: 20)]
+//let columns = [
+//    GridItem(.adaptive(minimum: 350))
+//]
 
 
 
@@ -42,7 +43,7 @@ struct SearchView: View {
                         Text("Explore the").foregroundColor(.gray).font(.title)
                         
                         Text("Solar System").bold().foregroundColor(.white).font(.title)
-                    }
+                    }.padding(.leading, 40)
                     
                     Spacer()
                     
@@ -51,7 +52,7 @@ struct SearchView: View {
                         AboutView()
                     } label: {
                         Image(systemName: "info.circle").resizable().scaledToFill().foregroundColor(.white).frame(width: 30, height: 30)
-                    }
+                    }.padding(.trailing, 40)
                     
                 }.padding(.bottom, 20).padding(.top, 20)
                 
@@ -72,10 +73,10 @@ struct SearchView: View {
                             VStack(alignment: .leading){
                                 
                                 ///Title's section
-                                Text("\(category)s").font(.title).bold().foregroundColor(.white)
+                                Text("\(category)s").font(.title).bold().foregroundColor(.white).padding(.leading, 40)
                                 
                                 ///Grid with elements
-                                LazyVGrid(columns: columns, alignment: .center, spacing: 20){
+                                LazyVGrid(columns: column, alignment: .center, spacing: 20){
                                     ForEach(temp, id: \.self){
                                         elem in
                                         NavigationLink{
@@ -93,18 +94,18 @@ struct SearchView: View {
                                                     }
                                        }.frame(height: 200)
                                                 
-                                            }.frame( height: 200, alignment: .leading).cornerRadius(16, antialiased: false).padding(.leading, 10)
+                                            }.frame( height: 200, alignment: .leading).cornerRadius(16, antialiased: false)
                                             
                                             
                                         }
                                         
                                     }
-                                }.padding(.trailing, 10).padding(.bottom, 30)
+                                }.padding(.leading, 40).padding(.trailing, 40).padding(.bottom, 30)
                             
                             ///Divider
                             if category != "Satellite" {
                                 
-                                Divider().background(.white).padding(.leading).padding(.trailing).padding(.bottom, 10)
+                                Divider().background(.white).padding(.leading, 40).padding(.trailing, 40).padding(.bottom, 10)
                                 
                             }
 
@@ -116,7 +117,7 @@ struct SearchView: View {
                 }
                     
                     
-            }.padding(.leading, 40).padding(.trailing, 40)
+            }
               
         }.background(darkness).navigationBarBackButtonHidden()
             

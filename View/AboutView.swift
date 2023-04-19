@@ -9,7 +9,7 @@ import SwiftUI
 
 var presentation = "Hi,\nMy name is Juan David Liut Aymar and I'm a Swift Student and the developer of Galileo.\nI created this app because I was inspired by the wonder children show when they see planets and stars.\nI would therefore like to help them, but also all those who, like me, are passionate about astronomy, to learn more about the solar system, showing them 3D models and curious details about celestial bodies.\nDuring the creation of Galileo, I always focused on inclusivity as well: I would like anyone to be able to use it without problems. For this reason, the colors have been chosen in such a way as to offer maximum contrast and facilitate reading and the reading of descriptions is available through the built-in function in iOS \"Speak Screen\"."
 
-var credits = "Credits\nThanks to Mattia Ballabio for the app's logo\nThanks to Nasa for the 3D models"
+var credits = "Credits\nLogo by Mattia Ballabio \n3D Models by NASA"
 
 
 struct AboutView: View {

@@ -25,7 +25,7 @@ struct CelestialView : View {
     
     
     
-    ///Flag to determine if the button Compare will appear or not
+    ///Flag to activate or not the comparison
     @State var comparisonOn : Bool = false
     
     var body: some View{
@@ -34,6 +34,8 @@ struct CelestialView : View {
         @State var description = selectedCelestial.description
         
         @State var origins = selectedCelestial.originName
+        
+        
         
         ZStack{
             
@@ -101,7 +103,11 @@ struct CelestialView : View {
                                 Button {
                                     comparisonOn = !comparisonOn
                                 } label: {
-                                    Text(verbatim: "Compare to Earth").frame(width:150, height: 30, alignment: .center).padding(7).foregroundColor(.white)
+                                    if !comparisonOn{
+                                        Text(verbatim: "Compare to Earth").frame(width:150, height: 30, alignment: .center).padding(7).foregroundColor(.white)}
+                                    else {
+                                        Text(verbatim: "End comparison").frame(width:150, height: 30, alignment: .center).padding(7).foregroundColor(.white)
+                                    }
                                 }.background(btnColor).clipShape(Rectangle()).cornerRadius(16, antialiased: true)
                             }
                             
