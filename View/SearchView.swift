@@ -100,7 +100,7 @@ struct SearchView: View {
                                         }
                                         
                                     }
-                                }.padding(.trailing, 10).padding(.bottom, 20)
+                                }.padding(.trailing, 10).padding(.bottom, 30)
                             
                             ///Divider
                             if category != "Satellite" {
@@ -114,10 +114,10 @@ struct SearchView: View {
                         }.cornerRadius(16)
                     }
                     
-                    }
+                }
                     
                     
-            }.padding(.leading, 40).padding(.trailing, 40).padding(.bottom, 20)
+            }.padding(.leading, 40).padding(.trailing, 40)
               
         }.background(darkness).navigationBarBackButtonHidden()
             

@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+
+
+
 struct AboutView: View {
     ///For the custom back button
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
@@ -26,8 +29,12 @@ struct AboutView: View {
                         
                         
                         ///Content
-                        HStack{
+                        HStack(alignment: .center,spacing: 20){
+                            ///Image
                             Rectangle().foregroundColor(.white).frame(width: 300, height: 300).cornerRadius(16)
+                            
+                            ///Presentation text
+                            
                             
                         }
                         

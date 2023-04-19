@@ -132,14 +132,14 @@ struct CelestialView : View {
                     
                     
                     
-                    TableView(selectedCelestial: selectedCelestial)
+                    TableView(selectedCelestial: selectedCelestial).padding(.bottom, 30)
                     
                     
                     
                 }
                 
                 
-            }.padding(.bottom, 40)
+            }
             
             
                     }.foregroundColor(.white).background(darkness).navigationBarBackButtonHidden(true)
