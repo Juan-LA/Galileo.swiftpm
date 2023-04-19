@@ -37,19 +37,16 @@ struct AboutView: View {
                         ///Content
                         HStack(alignment: .center, spacing: 30){
                             ///Image
-                            Rectangle().foregroundColor(.white).frame(width: 300, height: 500).cornerRadius(16)
+                            Image("photo").resizable().frame(width: 300, height: 500).cornerRadius(16)
                             
                            
                                 ///Presentation text
                             TextView(text: presentation).padding(.trailing, 30).padding(.top, 20)
-                            
-                            
-                            
-                            
-                        }.frame(height: 500)
+                           }.frame(height: 500)
                         
                     }.padding(.leading, 40).padding(.trailing, 40)
                     
+                    ///Credits
                     Text(credits).foregroundColor(.white).padding(.leading, 40).padding(.top, 20).opacity(0.5)
                     Spacer()
                     

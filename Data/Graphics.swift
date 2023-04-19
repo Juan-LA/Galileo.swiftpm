@@ -36,6 +36,8 @@ struct TextView: UIViewRepresentable {
         textView.textAlignment = .justified
         textView.backgroundColor = UIColor(Color(white: 1, opacity: 0))
         textView.textColor = .white
+        textView.isEditable = false
+        textView.isSelectable = false
         
         
         return textView
