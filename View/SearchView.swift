@@ -14,7 +14,6 @@ let columns = [
 
 
 
-
 struct SearchView: View {
     
     var statusBarColor: Color = .white {

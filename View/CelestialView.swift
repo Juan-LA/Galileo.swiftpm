@@ -20,16 +20,13 @@ struct CelestialView : View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     
-    
+    ///Celestial that will be displayed
     @State var selectedCelestial : Celestial
     
     
     
-    
+    ///Flag to determine if the button Compare will appear or not
     @State var comparisonOn : Bool = false
-    
-    //qui sarà salvato l'elemento selezionato nella pagina precedente
-    //    @StateObject var selectedElem : String
     
     var body: some View{
         
@@ -53,7 +50,8 @@ struct CelestialView : View {
 //                }.padding(.bottom, 10).padding(.leading, 40)
                 
                 ///Title
-                Text("Discover").font(.title).foregroundColor(.gray).padding(.top, 20).padding(.leading, 40)
+                Text("Discover").font(.title).foregroundColor(.gray).padding(.leading, 40).padding(.top, 20)
+                
                 Text(selectedCelestial.name).font(.system(size: 50)).foregroundColor(.white).bold().padding(.leading, 40)
                 
                 ScrollView{
@@ -104,7 +102,7 @@ struct CelestialView : View {
                                     comparisonOn = !comparisonOn
                                 } label: {
                                     Text(verbatim: "Compare to Earth").frame(width:150, height: 30, alignment: .center).padding(7).foregroundColor(.white)
-                                }.background(Color(red: 0.27, green: 0.27, blue: 0.52, opacity: 1)).clipShape(Rectangle()).cornerRadius(16, antialiased: true)
+                                }.background(btnColor).clipShape(Rectangle()).cornerRadius(16, antialiased: true)
                             }
                             
                         }.padding(.bottom, 10)
@@ -116,19 +114,30 @@ struct CelestialView : View {
                         ///Description
                         Text("Description").bold().font(.title2)
                         
+                        Group{
+                            LabelAlignment(text: selectedCelestial.description, textAlignmentStyle: .justified, width: UIScreen.main.bounds.width - 100 )
+
+                        }
                         
-                        Text(verbatim: selectedCelestial.description).font(.body)
-                        //
+                        
+//                        Text(verbatim: selectedCelestial.description).font(.body)
+//                        
                         ///Name's origin
                         Text("Origin of the name").bold().font(.title2)
                         
-                        Text(verbatim: selectedCelestial.originName).font(.body)
+                        
+                        Group{
+                            LabelAlignment(text: selectedCelestial.originName, textAlignmentStyle: .justified, width: UIScreen.main.bounds.width - 100 )
+
+                        }
+                        
+//                        Text(verbatim: selectedCelestial.originName).font(.body)
                         
                         ///Table with the details of the Celestial
                         Text("Details").bold().font(.title2)
                         
                         
-                    }.padding(.leading, 35).padding(.trailing, 35).foregroundColor(.white)
+                    }.padding(.leading, 40).padding(.trailing, 40).foregroundColor(.white)
                     
                     
                     

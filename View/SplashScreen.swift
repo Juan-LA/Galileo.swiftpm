@@ -20,7 +20,7 @@ struct SplashScreen: View {
         ZStack{
             
             ///Background
-            Image("wallpaper").resizable().scaledToFill()
+            Image("wallpaper").resizable()
             
             ///Logo
             HStack{

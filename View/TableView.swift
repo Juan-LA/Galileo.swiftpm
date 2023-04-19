@@ -133,27 +133,10 @@ struct TableView: View {
                 }.padding(.leading, 20).padding(.trailing, 20).padding(.top, 10).padding(.bottom, 20)
                 
                 
-                
-                
-                
-                
-                
             }
-//            .padding(.leading, 20).padding(.trailing, 20)
-            
-        
-            
-            
-            
+
             
         }.background(darkBackColor).cornerRadius(16)
-            .padding(.leading, 37).padding(.trailing, 37)
+            .padding(.leading, 50).padding(.trailing, 50)
         }
     }
-
-
-//struct TableView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        TableView()
-//    }
-//}
