@@ -2,7 +2,7 @@
 //  SwiftUIView.swift
 //  
 //
-//  Created by Juan Liut on 18/04/23.
+//  Created by Juan Liut on 09/07/23.
 //
 
 import SwiftUI
@@ -13,8 +13,6 @@ struct SwiftUIView: View {
     }
 }
 
-struct SwiftUIView_Previews: PreviewProvider {
-    static var previews: some View {
-        SwiftUIView()
-    }
+#Preview {
+    SwiftUIView()
 }
