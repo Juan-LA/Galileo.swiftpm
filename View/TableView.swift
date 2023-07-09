@@ -7,16 +7,9 @@
 
 import SwiftUI
 
-struct Voice : Identifiable {
-    let name : String
-    var id : String {name}
-}
-
 struct TableView: View {
-    
-    
+        
     var selectedCelestial : Celestial
-
     
     let specifics : [String] = ["Place inside the Solar System", "Type", "Number of satellites", "Times bigger than Earth", "Radius", "Mass", "Density", "Maximum temperature", "Minimum temperature"]
  

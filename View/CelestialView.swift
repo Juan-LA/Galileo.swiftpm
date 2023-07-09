@@ -43,13 +43,7 @@ struct CelestialView : View {
             Image("wallpaper").resizable()
             
             VStack(alignment: .leading){
-                
-                
-//                NavigationLink{
-//                    SearchView()
-//                } label: {
-//                    Image(systemName: "arrow.backward").foregroundColor(.white)
-//                }.padding(.bottom, 10).padding(.leading, 40)
+            
                 
                 ///Title
                 Text("Discover").font(.title).foregroundColor(.gray).padding(.leading, 40).padding(.top, 20)
@@ -59,19 +53,19 @@ struct CelestialView : View {
                 ScrollView{
                     VStack(alignment: .center, spacing: 0){
                         
-                        //image Celestial
-                        //if comparison is OFF
+                        ///Celestial's image
+                        ///if comparison is OFF
                         if !comparisonOn || selectedCelestial.name == "Earth"{
                             
                             Image(selectedCelestial.image).padding(.bottom, 25)
                         } else {
                             
-                            //if comparison is ON
+                            ///if comparison is ON
                             if selectedCelestial.big > 1{
                                 HStack(alignment: .center){
                                     Image(selectedCelestial.image).resizable().scaledToFit().padding(.bottom, 25).frame(height: 500)
                                     
-                                    //                                        Spacer()
+                                    
                                     Image("earth").resizable().scaledToFit().frame(height: 500 / CGFloat( selectedCelestial.big) )
                                     
                                 }.padding(.leading, 10).padding(.trailing, 10)
@@ -89,7 +83,7 @@ struct CelestialView : View {
                         
                         HStack{
                             
-                            //AR button if AR is available
+                            ///AR button if AR is available
                             if selectedCelestial.isARavailable{
                                 NavigationLink {
                                     ArView(selectedCelestial: selectedCelestial).tint(.white).tint(.white)
@@ -125,37 +119,25 @@ struct CelestialView : View {
 
                         }
                         
-                        
-//                        Text(verbatim: selectedCelestial.description).font(.body)
-//                        
                         ///Name's origin
                         Text("Origin of the name").bold().font(.title2)
-                        
                         
                         Group{
                             LabelAlignment(text: selectedCelestial.originName, textAlignmentStyle: .justified, width: UIScreen.main.bounds.width - 100 )
 
                         }
                         
-//                        Text(verbatim: selectedCelestial.originName).font(.body)
-                        
                         ///Table with the details of the Celestial
                         Text("Details").bold().font(.title2)
                         
-                        
                     }.padding(.leading, 40).padding(.trailing, 40).foregroundColor(.white)
                     
-                    
-                    
                     TableView(selectedCelestial: selectedCelestial).padding(.bottom, 30)
-                    
-                    
                     
                 }
                 
                 
             }
-            
             
                     }.foregroundColor(.white).background(darkness).navigationBarBackButtonHidden(true)
                         .navigationBarItems(leading: backButton)

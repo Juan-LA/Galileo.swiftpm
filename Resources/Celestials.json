@@ -22,12 +22,12 @@
         "isARavailable": false, 
         "big": 0.39,
         "type": "Terrestrial Planet",
-        "nSatellites": 2,
+        "nSatellites": 0,
         "radius" :  "2439,7 km (1516 miles)",
         "mass" : "3,3 × 10^23 kg",
         "density" : "5,427 g/cm^3",
-        "tMax" : "430 °C (806 °F)",
-        "tMin" : "-173 °C (-279,4 °F)"
+        "tMax" : "452 °C (845,6 °F)",
+        "tMin" : "-183 °C (-297,4 °F)"
     },
     {
         "name": "Venus",
@@ -42,13 +42,13 @@
         "mass" : "4,87 × 10^24 kg",
         "density" : "5,243 g/cm^3",
         "tMax" : "471 °C (879,8 °F)",
-        "tMin" : "462 °C (863,6 °F)"
+        "tMin" : "380 °C (716 °F)"
     },
     {
         "name": "Earth",
         "image": "earth",
-        "description": "Earth is the third planet from the Sun and is the largest of the terrestrial planets. It is composed mainly of rock and has a thin atmosphere that supports a diverse range of life. It has a single natural satellite, the Moon, and is protected by a magnetic field. Earth experiences seasons due to its tilted axis and has been extensively explored and studied by humans, including satellite observations and manned space missions.",
-        "originName": "The name Earth comes from the Middle English word \"erthe\", which is derived from the Old English word \"eor(th)e\". Both words mean \"ground\" or \"soil\". The name was given to our planet because it is the solid ground beneath our feet and the foundation of all life as we know it. The name \"Earth\" has been used for many centuries to refer to our planet, and it is the only planet in the solar system whose name does not come from Roman mythology.",
+        "description": "Earth is the third planet from the Sun and is the largest of the terrestrial planets. It is composed mainly of rock and has a thin atmosphere that supports a diverse range of life.\nIt has a single natural satellite, the Moon, and is protected by a magnetic field.\nEarth experiences seasons due to its tilted axis and has been extensively explored and studied by humans, including satellite observations and manned space missions.",
+        "originName": "The name Earth comes from the Middle English word \"erthe\", which is derived from the Old English word \"eor(th)e\". Both words mean \"ground\" or \"soil\".The name was given to our planet because it is the solid ground beneath our feet and the foundation of all life as we know it.\nThe name \"Earth\" has been used for many centuries to refer to our planet, and it is the only planet in the solar system whose name does not come from Roman mythology.",
         "isARavailable": false, 
         "big" : 1,
         "type": "Terrestrial Planet",
@@ -62,14 +62,14 @@
     {
         "name": "Mars",
         "image": "mars",
-        "description": "Mars is the fourth planet from the Sun and is known as the \"Red Planet\" due to its reddish appearance. It is composed mainly of rock and has a thin atmosphere. Mars has a heavily cratered surface, with vast deserts, deep canyons, and towering mountains. It has two small natural satellites, Phobos and Deimos. Mars is of great interest to scientists due to the possibility of past liquid water on its surface and potential future human exploration and colonization. It has been explored by numerous spacecraft, including NASA's Mars rovers and orbiters, and several missions are planned for the future.",
+        "description": "Mars is the fourth planet from the Sun and is known as the \"Red Planet\" due to its reddish appearance.\nIt is composed mainly of rock and has a thin atmosphere. Mars has a heavily cratered surface, with vast deserts, deep canyons, and towering mountains.It has two small natural satellites, Phobos and Deimos.\nMars is of great interest to scientists due to the possibility of past liquid water on its surface and potential future human exploration and colonization.\nIt has been explored by numerous spacecraft, including NASA's Mars rovers and orbiters, and several missions are planned for the future.",
         "originName": "The name Mars comes from the Roman god of war, who was also known as the god of agriculture. The planet was named after Mars because of its reddish appearance, which was associated with blood and war. Mars was an important deity in Roman mythology, and the name has been used to refer to the planet since ancient times.",
         "isARavailable": true,
         "big": 0.53,
         "type": "Terrestrial Planet",
         "nSatellites": 2,
         "radius" :  "3389,5 km (2106 miles)",
-        "mass" : "6,39 × 10^23 kg",
+        "mass" : "6,42 × 10^23 kg",
         "density" : "3,93 g/cm^3",
         "tMax" : "20 °C (68 °F)",
         "tMin" : "-143 °C (-225 °F)"
@@ -77,8 +77,8 @@
     {
         "name": "Jupiter",
         "image": "jupiter",
-        "description": "Jupiter is the fifth planet from the Sun and is the largest planet in the solar system. It is a gas giant composed mainly of hydrogen and helium, with a thick atmosphere that has colorful bands of clouds and a giant storm called the Great Red Spot. Jupiter has 79 known moons, including Ganymede, the largest moon in the solar system. It also has a faint ring system and a strong magnetic field that creates intense radiation belts. Jupiter has been visited by several spacecraft, including the Galileo mission, which studied its moons and atmosphere.",
-        "originName": "The name Jupiter comes from the king of the gods in Roman mythology, who was also known as Jove. Jupiter was the most powerful deity in the Roman pantheon and was associated with thunder, lightning, and the sky. The planet was named after Jupiter because of its size and brightness, which made it one of the most prominent objects in the night sky. The name \"Jupiter\" has been used to refer to the planet since ancient times.",
+        "description": "Jupiter is the fifth planet from the Sun and is the largest planet in the solar system.\nIt is a gas giant composed mainly of hydrogen and helium, with a thick atmosphere that has colorful bands of clouds and a giant storm called the Great Red Spot. Jupiter has 79 known moons, including Ganymede, the largest moon in the solar system. It also has a faint ring system and a strong magnetic field that creates intense radiation belts.\nJupiter has been visited by several spacecraft, including the Galileo mission, which studied its moons and atmosphere.",
+        "originName": "The name Jupiter comes from the king of the gods in Roman mythology, who was also known as Jove. Jupiter was the most powerful deity in the Roman pantheon and was associated with thunder, lightning, and the sky.\nThe planet was named after Jupiter because of its size and brightness, which made it one of the most prominent objects in the night sky. The name \"Jupiter\" has been used to refer to the planet since ancient times.",
         "isARavailable": false,
         "big": 1300,
         "type": "Gas Giant Planet",
@@ -92,8 +92,8 @@
     {
         "name":"Saturn",
         "image": "saturn",
-        "description": "Saturn is the sixth planet from the Sun and is known for its beautiful rings made up of icy particles and debris. It is a gas giant composed mainly of hydrogen and helium with a thick, colorful atmosphere. Saturn has 82 known moons, with Titan being the largest and only moon with a dense atmosphere. Its rings can be seen from Earth with a small telescope and are constantly changing. Saturn has been explored by several spacecraft, including the Cassini mission, which studied its rings, moons, and atmosphere in detail.",
-        "originName": "The name Saturn comes from the Roman god of agriculture and harvest, who was also known as the god of time. Saturn was an important deity in Roman mythology, and his name was given to the planet because of its slow movement across the sky, which was associated with the passage of time. The planet's most distinctive feature, its rings, were not discovered until much later, but they were named after the planet's namesake in honor of his role as the god of agriculture and abundance. The name \"Saturn\" has been used to refer to the planet since ancient times.",
+        "description": "Saturn is the sixth planet from the Sun and is known for its beautiful rings made up of icy particles and debris.It is a gas giant composed mainly of hydrogen and helium with a thick, colorful atmosphere.\nSaturn has 82 known moons, with Titan being the largest and only moon with a dense atmosphere. Its rings can be seen from Earth with a small telescope and are constantly changing.\nSaturn has been explored by several spacecraft, including the Cassini mission, which studied its rings, moons, and atmosphere in detail.",
+        "originName": "The name Saturn comes from the Roman god of agriculture and harvest, who was also known as the god of time.\nSaturn was an important deity in Roman mythology, and his name was given to the planet because of its slow movement across the sky, which was associated with the passage of time.\nThe planet's most distinctive feature, its rings, were not discovered until much later, but they were named after the planet's namesake in honor of his role as the god of agriculture and abundance. The name \"Saturn\" has been used to refer to the planet since ancient times.",
         "isARavailable": false,
         "big" : 9,
         "type": "Gas Giant Planet",
@@ -107,8 +107,8 @@
     {
         "name": "Uranus",
         "image": "uranus",
-        "description": "Uranus is the seventh planet from the Sun and is a gas giant with a blue-green color due to the presence of methane in its atmosphere. It has 27 known moons, with Titania being the largest. Uranus rotates on its side, with its axis tilted at an angle of 98 degrees, making its poles where the equator is on other planets. Uranus also has a system of faint rings and has been visited by only one spacecraft, Voyager 2, which flew by the planet in 1986 and discovered its rings and moons.",
-        "originName": "The name Uranus comes from the Greek god of the sky, Uranus, who was also the father of the god of time, Cronus (Saturn in Roman mythology). The planet was originally named \"Georgium Sidus\" (George's Star) by British astronomer William Herschel, who discovered it in 1781, but it was later renamed after the Greek god of the sky to conform to the tradition of naming planets after deities. The name \"Uranus\" has been used to refer to the planet since the mid-19th century.",
+        "description": "Uranus is the seventh planet from the Sun and is a gas giant with a blue-green color due to the presence of methane in its atmosphere. It has 27 known moons, with Titania being the largest.\nUranus rotates on its side, with its axis tilted at an angle of 98 degrees, making its poles where the equator is on other planets. Uranus also has a system of faint rings and has been visited by only one spacecraft, Voyager 2, which flew by the planet in 1986 and discovered its rings and moons.",
+        "originName": "The name Uranus comes from the Greek god of the sky, Uranus, who was also the father of the god of time, Cronus (Saturn in Roman mythology).\nThe planet was originally named \"Georgium Sidus\" (George's Star) by British astronomer William Herschel, who discovered it in 1781, but it was later renamed after the Greek god of the sky to conform to the tradition of naming planets after deities.\nThe name \"Uranus\" has been used to refer to the planet since the mid-19th century.",
         "isARavailable": false,
         "big": 4,
         "type": "Gas Giant Planet",
@@ -117,13 +117,13 @@
         "mass" : "8,68 × 10^25 kg",
         "density" : "1,27 g/cm^3",
         "tMax" : "-208 °C (-342,4 °F)",
-        "tMin" : "-212 °C (-349,6 °F)"
+        "tMin" : "-214,2 °C (-353,56 °F)"
     },
     {
         "name": "Neptune",
         "image": "neptune",
-        "description": "Neptune is the eighth planet from the Sun and is a gas giant with a blue color due to the presence of methane in its atmosphere. It has 14 known moons, with Triton being the largest. Neptune has a thick atmosphere with clouds and storms, including the Great Dark Spot, a giant storm that disappeared in the 1990s. It also has a system of faint rings and has been visited by only one spacecraft, Voyager 2, which discovered its rings, moons, and atmosphere in detail.",
-        "originName": "The name Neptune comes from the Roman god of the sea, who was also known as Poseidon in Greek mythology. The planet was discovered in 1846 by French astronomer Urbain Le Verrier, who calculated its position based on irregularities in the orbit of Uranus. The planet was named after the god of the sea because of its blue color, which was associated with the color of water. The name \"Neptune\" has been used to refer to the planet since its discovery.",
+        "description": "Neptune is the eighth planet from the Sun and is a gas giant with a blue color due to the presence of methane in its atmosphere. It has 14 known moons, with Triton being the largest.\nNeptune has a thick atmosphere with clouds and storms, including the Great Dark Spot, a giant storm that disappeared in the 1990s. It also has a system of faint rings and has been visited by only one spacecraft, Voyager 2, which discovered its rings, moons, and atmosphere in detail.",
+        "originName": "The name Neptune comes from the Roman god of the sea, who was also known as Poseidon in Greek mythology.\nThe planet was discovered in 1846 by French astronomer Urbain Le Verrier, who calculated its position based on irregularities in the orbit of Uranus.\nThe planet was named after the god of the sea because of its blue color, which was associated with the color of water. The name \"Neptune\" has been used to refer to the planet since its discovery.",
         "isARavailable": false,
         "big": 3.9,
         "type": "Gas Giant Planet",
@@ -137,9 +137,9 @@
     {
         "name": "Moon",
         "image": "moon",
-        "description": "The Moon is a natural satellite of Earth and the fifth largest moon in the solar system. It is composed mainly of rock and has a heavily cratered surface, with flat plains and mountainous regions. It has no atmosphere or magnetic field and influences tides on Earth. The Moon has been explored by humans during the Apollo missions in the 1960s and 1970s and is of great interest to scientists for its record of the early history of the solar system and potential resources for future exploration and colonization.",
-            "originName": "The English word \"Moon\" comes from the Old English word \"mona\", which is derived from the Proto-Germanic word \"menon.\" The word has been used to refer to Earth's natural satellite for many centuries, and it is also used to refer to similar objects orbiting other planets. The name \"Moon\" is thought to be related to the ancient Indo-European word \"mēn\", which means \"to measure\" or \"month\", because the phases of the Moon were used to mark the passage of time in many cultures.",
-            "isARavailable": false,
+        "description": "The Moon is a natural satellite of Earth and the fifth largest moon in the solar system.\nIt is composed mainly of rock and has a heavily cratered surface, with flat plains and mountainous regions. It has no atmosphere or magnetic field and influences tides on Earth.\nThe Moon has been explored by humans during the Apollo missions in the 1960s and 1970s and is of great interest to scientists for its record of the early history of the solar system and potential resources for future exploration and colonization.",
+            "originName": "The English word \"Moon\" comes from the Old English word \"mona\", which is derived from the Proto-Germanic word \"menon\".\nThe word has been used to refer to Earth's natural satellite for many centuries, and it is also used to refer to similar objects orbiting other planets.\nThe name \"Moon\" is thought to be related to the ancient Indo-European word \"mēn\", which means \"to measure\" or \"month\", because the phases of the Moon were used to mark the passage of time in many cultures.",
+            "isARavailable": true,
         "big":0.25,
         "type": "Satellite",
         "nSatellites": 0,
@@ -147,7 +147,7 @@
         "mass" : "7,34 × 10^22 kg",
         "density" : "3,34 g/cm^3",
         "tMax" : "127 °C (261 °F)",
-        "tMin" : "-173 °C (-280 °F)"
+        "tMin" : "-233,2 °C (-387,76 °F)"
         
     }
 ]

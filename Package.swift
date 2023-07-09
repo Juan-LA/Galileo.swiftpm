@@ -20,7 +20,7 @@ let package = Package(
             teamIdentifier: "4Q64HMZS63",
             displayVersion: "1.0",
             bundleVersion: "1",
-            appIcon: .placeholder(icon: .note),
+            appIcon: .asset("AppIcon"),
             accentColor: .presetColor(.cyan),
             supportedDeviceFamilies: [
                 .pad,
@@ -31,7 +31,11 @@ let package = Package(
                 .landscapeRight,
                 .landscapeLeft,
                 .portraitUpsideDown(.when(deviceFamilies: [.pad]))
-            ]
+            ],
+            capabilities: [
+                .camera(purposeString: "The apps needs the camera to show you the planets")
+            ],
+            appCategory: .education
         )
     ],
     targets: [

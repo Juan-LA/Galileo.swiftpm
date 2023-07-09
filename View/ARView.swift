@@ -15,9 +15,7 @@ struct ArView : View {
     var arView: ARView!
     let anchor = AnchorEntity()
     var body: some View {
-        // Load the "Box" scene from the "Experience" Reality File
-       // arView.frame = .zero
-      //  arView.scene.anchors.removeAll()
+        
         ZStack{
             Color(.black)
             ARViewContainer(selectedCelestial: selectedCelestial.image).tint(.white)
@@ -25,7 +23,6 @@ struct ArView : View {
         // Add the box anchor to the scene
     }
 }
-
 
 struct ARViewContainer: UIViewRepresentable {
     
@@ -66,18 +63,26 @@ struct ARViewContainer: UIViewRepresentable {
         let fileURL = Bundle.main.url(forResource: selectedCelestial, withExtension: "reality")
         let planetScene = try! Entity.load(contentsOf: fileURL!)
  
-        // Add the box anchor to the scene
+        ///Add the box anchor to the scene
         anchor.addChild(planetScene)
         
+        ///Model will be modified according to its name
         if selectedCelestial == "sun"{
             anchor.scale = [3,3,3]
+            
         } else if selectedCelestial == "mars"{
             anchor.scale = [1,1,1]
+            
+        }else if selectedCelestial == "moon" {
+            anchor.scale = [2.3, 2.3, 2.3]
+            
         }
         
+        ///Anchor's position
         anchor.position.y = -0.5
         anchor.position.x = 0
         anchor.position.z = -2
+        
         
         
         uiView.scene.anchors.append(anchor)

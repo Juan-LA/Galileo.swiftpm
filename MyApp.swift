@@ -4,7 +4,7 @@ import SwiftUI
 struct MyApp: App {
     var body: some Scene {
         WindowGroup {
-            SplashScreen().preferredColorScheme(.dark)
+            SplashScreen().preferredColorScheme(.dark).tint(.white)
                 
         }
     }

@@ -10,8 +10,6 @@ import SwiftUI
 
 class Celestial: Decodable, Hashable {
     
-    
-    
     var name : String
     var image : String
     var description : String
@@ -73,16 +71,6 @@ class Celestial: Decodable, Hashable {
 }
 
 
-//class Planet: Celestial {
-////    var nameType: String = "Planet"
-//
-//
-//    override func hash(into hasher: inout Hasher) {
-//        hasher.combine(nSatellites)
-//    }
-//
-//}
-
 ///NOTE: Stars and Satellites don't have additional attributes that make them different from Celestial. So I won't create different classes
 
 
@@ -95,7 +83,7 @@ func getListForType(nameType: String) -> [Celestial]{
         fatalError("File not found")
     }
     
-    //reads data
+    ///Reads data
     let data = try! Data(contentsOf: url)
     let decoder = JSONDecoder()
     decoded = try! decoder.decode([Celestial].self, from: data)
