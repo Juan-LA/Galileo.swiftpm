@@ -9,19 +9,8 @@ import SwiftUI
 
 ///Columns grid
 let column = [GridItem(spacing: 20), GridItem(spacing: 20)]
-//let columns = [
-//    GridItem(.adaptive(minimum: 350))
-//]
-
-
 
 struct SearchView: View {
-    
-    var statusBarColor: Color = .white {
-    didSet {
-    self.background(statusBarColor)
-    }
-    }
     
     ///Categories that will be displayed
     var categories : [String] = ["Planet", "Star", "Satellite"]
@@ -83,10 +72,12 @@ struct SearchView: View {
                                             CelestialView(selectedCelestial: elem)
                                         } label: {
                                             ZStack(alignment: .leading){
+                                                
                                                 ///Tile's background
                                 square.cornerRadius(16, antialiased: false).foregroundColor(darkBackColor)
                                                 
                                                 HStack{
+                                                    
                                                     ///Celestial's name
                                                                       ZStack(alignment: .leading){
                                                         Text(elem.name).font(.system(size: 40)).bold().frame( alignment: .topLeading).padding(.leading, 30).padding(.bottom, 100).foregroundColor(.white)
