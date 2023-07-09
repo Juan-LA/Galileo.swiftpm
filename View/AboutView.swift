@@ -18,53 +18,120 @@ struct AboutView: View {
     
     
     var body: some View {
-        ZStack(alignment: .topLeading){
-                ///Background
-                Image("wallpaper").resizable()
+        
+        GeometryReader{
+            geometry in
             
-            VStack(alignment: .leading){
-                Text("About the").foregroundColor(.gray).font(.title).padding(.leading, 40).padding(.top, 20)
-                Text("App").bold().foregroundColor(.white).font(.title).padding(.leading, 40)
-                
-                ZStack{
-                    Rectangle().foregroundColor(darkBackColor).background(btnColor).frame(height: 280).cornerRadius(16)
-                    TextView(text: presentation).padding(.trailing, 30).padding(.top, 20).frame(height: 280).padding(.leading, 30)
+          
+                if geometry.size.width > 434
+                {
+                    ///For ipad
+                    
+                    ZStack(alignment: .topLeading){
+                        ///Background
+                        Image("wallpaper").resizable()
+                        
+                        VStack(alignment: .leading){
+                            Text("About the").foregroundColor(.gray).font(.title).padding(.leading, 40).padding(.top, 20)
+                            Text("App").bold().foregroundColor(.white).font(.title).padding(.leading, 40)
+                            
+                            ZStack{
+                                Rectangle().foregroundColor(darkBackColor).background(btnColor).frame(height: 280).cornerRadius(16)
+                                TextView(text: presentation).padding(.trailing, 30).padding(.top, 20).frame(height: 280).padding(.leading, 30)
+                                
+                                
+                            }.padding(.leading, 40).padding(.trailing, 40)
+                            
+                            
+                            
+                            Group{
+                                
+                                ///Credits
+                                Text("Special thanks to").bold().foregroundColor(.white).font(.title).padding(.leading, 40).padding(.top, 20)
+                                
+                                Text("Mattia Ballabio").font(.title2).padding(.top, 5).padding(.leading, 40)
+                                Text("for the Logo").foregroundColor(.gray).padding(.leading, 40)
+                                
+                                Text("NASA").font(.title2).padding(.top, 5).padding(.leading, 40)
+                                Text("for the 3D models").foregroundColor(.gray).padding(.leading, 40)
+                                
+                                ///Section about the developer
+                                Text("To see ").foregroundColor(.gray).font(.title).padding(.top, 20).padding(.leading, 40)
+                                
+                                Text("New projects").bold().foregroundColor(.white).font(.title).padding(.leading, 40)
+                                
+                            }
+                            HStack(alignment: .center){
+                                
+                                Image(systemName: "globe")
+                                Link("GitHub", destination: URL(string: "https://github.com/Juan-LA")!)
+                            }.padding(.leading, 40).padding(.top, 5)
+                            
+                        }
+                        
+                        
+                        
+                    }.background(darkness).foregroundColor(.white).navigationBarBackButtonHidden(true)
+                        .navigationBarItems(leading: backButton)
                     
                     
-                }.padding(.leading, 40).padding(.trailing, 40)
-                
-                
-                
-                Group{
-                    
-                    ///Credits
-                    Text("Special thanks to").bold().foregroundColor(.white).font(.title).padding(.leading, 40).padding(.top, 20)
-                    
-                    Text("Mattia Ballabio").font(.title2).padding(.top, 5).padding(.leading, 40)
-                    Text("for the Logo").foregroundColor(.gray).padding(.leading, 40)
-                    
-                    Text("NASA").font(.title2).padding(.top, 5).padding(.leading, 40)
-                    Text("for the 3D models").foregroundColor(.gray).padding(.leading, 40)
-                
-                    ///Section about the developer
-                    Text("To see ").foregroundColor(.gray).font(.title).padding(.top, 20).padding(.leading, 40)
-                    
-                    Text("New projects").bold().foregroundColor(.white).font(.title).padding(.leading, 40)
+                } else {
+                    ///For iphone
+                    ZStack(alignment: .topLeading){
+                        ///Background
+                        Image("wallpaper").resizable().ignoresSafeArea()
+                        
+                        VStack(){
+                            ScrollView{
+                                VStack(alignment: .leading){
+                                    Text("About the").foregroundColor(.gray).font(.title).padding(.leading, 15).padding(.top, 20)
+                                    Text("App").bold().foregroundColor(.white).font(.title).padding(.leading, 15)
+                                    
+                                    ZStack{
+                                        Rectangle().foregroundColor(darkBackColor).background(btnColor).frame(height: 420).cornerRadius(16)
+                                        Text(verbatim: presentation).padding(.trailing, 15).frame(height: 400).padding(.leading, 15)
+                                        
+                                        
+                                    }.padding(.leading, 15).padding(.trailing, 15)
+                                    
+                                    
+                                    
+                                    Group{
+                                        
+                                        ///Credits
+                                        Text("Special thanks to").bold().foregroundColor(.white).font(.title).padding(.leading, 15).padding(.top, 20)
+                                        
+                                        Text("Mattia Ballabio").font(.title2).padding(.top, 5).padding(.leading, 15)
+                                        Text("for the Logo").foregroundColor(.gray).padding(.leading, 15)
+                                        
+                                        Text("NASA").font(.title2).padding(.top, 5).padding(.leading, 15)
+                                        Text("for the 3D models").foregroundColor(.gray).padding(.leading, 15)
+                                        
+                                        ///Section about the developer
+                                        Text("To see ").foregroundColor(.gray).font(.title).padding(.top, 20).padding(.leading, 15)
+                                        
+                                        Text("New projects").bold().foregroundColor(.white).font(.title).padding(.leading, 15)
+                                        
+                                    }
+                                    HStack(alignment: .center){
+                                        
+                                        Image(systemName: "globe")
+                                        Link("GitHub", destination: URL(string: "https://github.com/Juan-LA")!)
+                                    }.padding(.leading, 15).padding(.top, 5)
+                                    
+                                }
+                            }
+                        }
+                        
+                        
+                        
+                    }.background(darkness).foregroundColor(.white).navigationBarBackButtonHidden(true)
+                        .navigationBarItems(leading: backButton)
                     
                 }
-                HStack(alignment: .center){
-                    
-                    Image(systemName: "globe")
-                    Link("GitHub", destination: URL(string: "https://github.com/Juan-LA")!)
-                }.padding(.leading, 40).padding(.top, 5)
-                
-            }
             
             
-                
-            }.background(darkness).foregroundColor(.white).navigationBarBackButtonHidden(true)
-            .navigationBarItems(leading: backButton)
-            
+        }
             
     }
     
@@ -73,7 +140,7 @@ struct AboutView: View {
                 self.presentationMode.wrappedValue.dismiss()
             }) {
                 Image(systemName: "arrow.left")
-                    .foregroundColor(.white).padding(.leading, 20)
+                    .foregroundColor(.white).padding(.leading, -10)
             }
         }
     

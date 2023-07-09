@@ -52,7 +52,7 @@ struct SplashScreen: View {
             else {
                 
                 ZStack(alignment: Alignment(horizontal: .leading, vertical: .center)){
-                            Image("wallpaper").resizable()
+                    Image("wallpaper").resizable().ignoresSafeArea()
                 
                             VStack(alignment: .leading, spacing: 10){
                                 Image("logo").resizable().scaledToFit().frame(height: 100)
